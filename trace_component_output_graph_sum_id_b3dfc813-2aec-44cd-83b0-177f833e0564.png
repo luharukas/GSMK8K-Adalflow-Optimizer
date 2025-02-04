@@ -1,0 +1,32 @@
+digraph {
+	graph [rankdir=TB]
+	"4e84f5bd-279d-4e24-9fba-3f4146c0cb04" [label=<
+            <table border="0" cellborder="1" cellspacing="0">
+                <tr><td><b>Name:</b></td><td>Generator_outputy_pred_0</td></tr>
+                <tr><td><b>Type:</b></td><td>GENERATOR_OUTPUT</td></tr>
+                <tr><td><b>Value:</b></td><td>GeneratorOutput(id=&apos;76c3aa8d-c076-4d35-8f84-900c9003f944&apos;,<br/>data=12, error=None,<br/>usage=CompletionUsage(completion_tokens=94,<br/>prompt_tokens=116, total_tokens=210),<br/>raw_response=&quot;Let&apos;s count the<br/>vegetables:\n- (...) + 1 + 2 + 2 =<br/>12\n\nAnswer: 12\n&quot;, metadata=None)</td></tr><tr><td><b>Component Trace ID:</b></td><td>302a1875-283a-4f01-84c5-78ae2eeba1a8</td></tr><tr><td><b>Component Trace Name:</b></td><td>Generator</td></tr></table>> color=lightblue shape=plaintext]
+	"9e140311-b753-478a-b402-6efeb393cf35" [label=<
+            <table border="0" cellborder="1" cellspacing="0">
+                <tr><td><b>Name:</b></td><td>Generator_outputy_pred_1</td></tr>
+                <tr><td><b>Type:</b></td><td>GENERATOR_OUTPUT</td></tr>
+                <tr><td><b>Value:</b></td><td>GeneratorOutput(id=&apos;10349643-1ae4-4d3f-be83-b39ed62d58bf&apos;,<br/>data=5, error=None,<br/>usage=CompletionUsage(completion_tokens=41,<br/>prompt_tokens=99, total_tokens=140),<br/>raw_response=&apos;I have one couch,<br/>(...) + 1 + 2 + 1 = 5\n\nAnswer:<br/>5\n&apos;, metadata=None)</td></tr><tr><td><b>Component Trace ID:</b></td><td>302a1875-283a-4f01-84c5-78ae2eeba1a8</td></tr><tr><td><b>Component Trace Name:</b></td><td>Generator</td></tr></table>> color=lightblue shape=plaintext]
+	"63e2da6c-cf02-42f2-bf4e-665a77cd0ad3" [label=<
+            <table border="0" cellborder="1" cellspacing="0">
+                <tr><td><b>Name:</b></td><td>EvalFnToTextLoss_output</td></tr>
+                <tr><td><b>Type:</b></td><td>LOSS_OUTPUT</td></tr>
+                <tr><td><b>Value:</b></td><td>0.0</td></tr><tr><td><b>Component Trace ID:</b></td><td>d72da33c-0ca4-408c-8e57-8e7821b1d18e</td></tr><tr><td><b>Component Trace Name:</b></td><td>EvalFnToTextLoss</td></tr></table>> color=lightblue shape=plaintext]
+	"b3dfc813-2aec-44cd-83b0-177f833e0564" [label=<
+            <table border="0" cellborder="1" cellspacing="0">
+                <tr><td><b>Name:</b></td><td>sum</td></tr>
+                <tr><td><b>Type:</b></td><td>SUM_OUTPUT</td></tr>
+                <tr><td><b>Value:</b></td><td>0.0,0.0</td></tr><tr><td><b>Component Trace ID:</b></td><td>b3dfc813-2aec-44cd-83b0-177f833e0564</td></tr><tr><td><b>Component Trace Name:</b></td><td>sum</td></tr></table>> color=lightblue shape=plaintext]
+	"f30665a5-00da-4ad5-b9ee-b937a37bb968" [label=<
+            <table border="0" cellborder="1" cellspacing="0">
+                <tr><td><b>Name:</b></td><td>EvalFnToTextLoss_output_f30665a5-00da-4ad5-b9ee-b937a37bb968</td></tr>
+                <tr><td><b>Type:</b></td><td>LOSS_OUTPUT</td></tr>
+                <tr><td><b>Value:</b></td><td>0.0</td></tr><tr><td><b>Component Trace ID:</b></td><td>d72da33c-0ca4-408c-8e57-8e7821b1d18e</td></tr><tr><td><b>Component Trace Name:</b></td><td>EvalFnToTextLoss</td></tr></table>> color=lightblue shape=plaintext]
+	"f30665a5-00da-4ad5-b9ee-b937a37bb968" -> "b3dfc813-2aec-44cd-83b0-177f833e0564"
+	"4e84f5bd-279d-4e24-9fba-3f4146c0cb04" -> "f30665a5-00da-4ad5-b9ee-b937a37bb968"
+	"63e2da6c-cf02-42f2-bf4e-665a77cd0ad3" -> "b3dfc813-2aec-44cd-83b0-177f833e0564"
+	"9e140311-b753-478a-b402-6efeb393cf35" -> "63e2da6c-cf02-42f2-bf4e-665a77cd0ad3"
+}
